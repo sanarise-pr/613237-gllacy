@@ -14,10 +14,10 @@
 
     <nav class="main-menu">
       <h2 class="visually-hidden">Главное меню</h2>
-      <ol class="main-menu__list">
+      <ul class="main-menu__list">
         <li class="main-menu__item">
           <a class="main-menu__link" href="/catalog.html">Каталог</a>
-          <nav class="catalog-menu popup">
+          <section class="catalog-menu popup">
             <h3 class="visually-hidden">Разделы каталога</h3>
             <a href="catalog-new.html" class="catalog-menu__link"><b>Новинки</b></a>
             <ul class="catalog-menu__list">
@@ -34,7 +34,7 @@
                 <a href="catalog-melorin.html" class="catalog-menu__link">Мелорин</a>
               </li>
             </ul>
-          </nav>
+          </section>
         </li>
         <li class="main-menu__item">
           <a class="main-menu__link" href="delivery.html">Доставка и оплата</a>
@@ -42,7 +42,7 @@
         <li class="main-menu__item">
           <a class="main-menu__link" href="about.html">О Компании</a>
         </li>
-      </ol>
+      </ul>
     </nav>
 
     <nav class="user-menu">
@@ -140,17 +140,17 @@
 
     <section class="banners">
       <h2 class="visually-hidden">Специальные предложения</h2>
-      <figure class="banner banner_raspberry">
-        <figcaption class="banner__header">Малинка даром!</figcaption>
+      <div class="banner banner_raspberry">
+        <b class="banner__header">Малинка даром!</b>
         <p class="banner__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
         <span class="promo-button promo-button_medium">Хочу варенье!</span>
-      </figure>
+      </div>
 
-      <figure class="banner banner_chocolate">
-        <figcaption class="banner__header">Шоколадки даром!</figcaption>
+      <div class="banner banner_chocolate">
+        <b class="banner__header">Шоколадки даром!</b>
         <p class="banner__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки  совершенно бесплатно.</p>
         <span class="promo-button promo-button_medium">Хочу шоколадки!</span>
-      </figure>
+      </div>
     </section>
 
     <section class="bestsellers">
@@ -191,18 +191,15 @@
       </ul>
     </section>
 
-    <article class="about-us">
+    <section class="about-us">
       <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-      <section class="advantages">
-        <h3 class="visually-hidden">Наши преимущества</h3>
-        <ul class="advantages__list">
-          <li class="advantages__item advantages__item_tech">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-          <li class="advantages__item advantages__item_eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-          <li class="advantages__item advantages__item_cows">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-          <li class="advantages__item advantages__item_temp">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
-        </ul>
-      </section>
-    </article>
+      <ul class="advantages__list">
+        <li class="advantages__item advantages__item_tech">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+        <li class="advantages__item advantages__item_eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+        <li class="advantages__item advantages__item_cows">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+        <li class="advantages__item advantages__item_temp">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+      </ul>
+    </section>
 
     <aside class="blog-news">
       <h2 class="blog-news__header">Новое в нашем блоге</h2>
@@ -246,10 +243,10 @@
     </div>
 
     <div class="footer-copyright">
-      <a class="footer-copyright__logo" href="http://htmlacademy.ru" title="HTML Academy">
+      <a class="footer-copyright__logo" href="http://htmlacademy.ru" target="_blank" title="HTML Academy">
         <img src="http://placehold.it/108x39" width="108" height="39" alt="HTML Academy">
       </a>
-      <p class="footer-copyright__text">Сделано в <a href="http://htmlacademy.ru">HTML Academy</a> © 2017</p>
+      <p class="footer-copyright__text">Сделано в <a href="http://htmlacademy.ru" target="_blank">HTML Academy</a> © 2017</p>
     </div>
   </footer>
 
