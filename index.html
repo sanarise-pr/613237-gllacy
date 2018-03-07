@@ -4,12 +4,13 @@
 <head>
   <meta charset="utf-8">
   <title>GllacyShop – магазин мороженого</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
   <header class="header">
     <a class="logo" title="GllacyShop – магазин мороженого">
-      <img class="logo__image" src="http://placehold.it/154x64" width="154" height="64" alt="Логотип GllacyShop">
+      <img class="logo__image" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
     </a>
 
     <nav class="main-menu">
@@ -70,30 +71,7 @@
         </section>
       </div>
       <div class="user-menu__item">
-        <span class="nav-button nav-button_empty-basket">Корзина</span>
-        <section class="basket-form popup">
-          <h3 class="visually-hidden">Содержимое корзины</h3>
-          <table class="basket-form__goods-table">
-            <tr>
-              <td><span class="basket-form__delete-button"></span></td>
-              <td><img class="basket-form__good-image" src="http://placehold.it/33x33" width="33" height="33" alt="Пломбир с апельсиновым джемом"></td>
-              <td>Пломбир с апельсиновым джемом</td>
-              <td>1,5 кг х <span class="basket-form__price">200 руб.</span></td>
-              <td>300 руб.</td>
-            </tr>
-            <tr>
-              <td><span class="basket-form__delete-button"></span></td>
-              <td><img class="basket-form__good-image" src="http://placehold.it/33x33" width="33" height="33" alt="Клубничный пломбир с присыпкой  из белого шоколада"></td>
-              <td>Клубничный пломбир с присыпкой из белого шоколада</td>
-              <td>1,5 кг х <span class="basket-form__price">300 руб.</span></td>
-              <td>450 руб.</td>
-            </tr>
-          </table>
-          <b class="basket-form__total-amount">Итого: 750 руб.</b>
-          <form action="/order">
-            <!--TODO -->
-          </form>
-        </section>
+        <span class="nav-button nav-button_empty-basket">Пусто</span>
       </div>
     </nav>
 
@@ -121,17 +99,17 @@
         <div class="promo__slides">
           <figure class="promo-slide">
             <figcaption class="promo-slide__tagline">Крем-брюле и пломбир с малиновым джемом</figcaption>
-            <img class="promo-slide__image" src="http://placehold.it/647x584" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
+            <img class="promo-slide__image" src="img/promo-pair-green.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
             <span class="promo-button promo-button_large">Давайте оба!</span>
           </figure>
           <figure class="promo-slide">
             <figcaption class="promo-slide__tagline">Шоколадный пломбир и лимонный сорбет</figcaption>
-            <img class="promo-slide__image" src="http://placehold.it/647x584" width="647" height="584" alt="Шоколадный пломбир и лимонный сорбет">
+            <img class="promo-slide__image" src="img/promo-pair-blue.png" width="644" height="582" alt="Шоколадный пломбир и лимонный сорбет">
             <span class="promo-button promo-button_large">Давайте оба!</span>
           </figure>
           <figure class="promo-slide">
             <figcaption class="promo-slide__tagline">Пломбир с помадкой и клубничный щербет</figcaption>
-            <img class="promo-slide__image" src="http://placehold.it/647x584" width="647" height="584" alt="Пломбир с помадкой и клубничный щербет">
+            <img class="promo-slide__image" src="img/promo-pair-red.png" width="639" height="582" alt="Пломбир с помадкой и клубничный щербет">
             <span class="promo-button promo-button_large">Давайте оба!</span>
           </figure>
         </div>
@@ -159,7 +137,7 @@
         <li class="catalog-list__item catalog-list__item_bestseller">
           <a class="catalog-list__link" href="catalog-item.html">
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
+            <img src="img/icecream-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <p>310&#x584;<span>/кг</span></p>
           </a>
           <span class="promo-button promo-button_medium">Быстрый просмотр</span>
@@ -167,7 +145,7 @@
         <li class="catalog-list__item catalog-list__item_bestseller">
           <a class="catalog-list__link" href="catalog-item.html">
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="Сливочно-кофейное с кусочками шоколада">
+            <img src="img/icecream-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             <p>380&#x584;<span>/кг</span></p>
           </a>
           <span class="promo-button promo-button_medium">Быстрый просмотр</span>
@@ -175,7 +153,7 @@
         <li class="catalog-list__item catalog-list__item_bestseller">
           <a class="catalog-list__link" href="catalog-item.html">
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="Сливочно-клубничное с присыпкой из белого шоколада">
+            <img src="img/icecream-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p>355&#x584;<span>/кг</span></p>
           </a>
           <span class="promo-button promo-button_medium">Быстрый просмотр</span>
@@ -183,7 +161,7 @@
         <li class="catalog-list__item catalog-list__item_bestseller">
           <a class="catalog-list__link" href="catalog-item.html">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
-            <img src="http://placehold.it/200x200" width="200" height="200" alt="Сливочное крем-брюле с карамельной подливкой">
+            <img src="img/icecream-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p>415&#x584;<span>/кг</span></p>
           </a>
           <span class="promo-button promo-button_medium">Быстрый просмотр</span>
@@ -204,7 +182,7 @@
     <aside class="blog-news">
       <h2 class="blog-news__header">Новое в нашем блоге</h2>
       <p class="blog-news__post-title">10 способов сервировки фруктовых щербетов к столу</p>
-      <img class="blog-news__post-img" src="http://placehold.it/420x220" width="420" height="220" alt="Логотип GllacyShop" alt="10 способов сервировки фруктовых щербетов к столу">
+      <img class="blog-news__post-img" src="img/blog-post-img.jpg" width="560" height="220" alt="Логотип GllacyShop" alt="10 способов сервировки фруктовых щербетов к столу">
     </aside>
 
     <section class="subscribe">
@@ -244,7 +222,7 @@
 
     <div class="footer-copyright">
       <a class="footer-copyright__logo" href="http://htmlacademy.ru" target="_blank" title="HTML Academy">
-        <img src="http://placehold.it/108x39" width="108" height="39" alt="HTML Academy">
+        <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="HTML Academy">
       </a>
       <p class="footer-copyright__text">Сделано в <a href="http://htmlacademy.ru" target="_blank">HTML Academy</a> © 2017</p>
     </div>
