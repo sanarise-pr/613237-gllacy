@@ -193,7 +193,7 @@
 
     <section class="location-map">
       <h2 class="visually-hidden">Cхема проезда и контактная информация</h2>
-      <!--TODO -->
+      <div class="location-map__container" id="location-map"></div>
       <div class="location-map__overlay">
         <p>Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
         <p>Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
@@ -234,6 +234,9 @@
     <form action="/feedback"><!--TODO --></form>
     <span class="feedback__close-btn">Закрыть</span>
   </section>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/location-map.js" type="text/javascript"></script>
 </body>
 
 </html>
