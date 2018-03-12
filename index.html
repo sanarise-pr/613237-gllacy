@@ -9,14 +9,14 @@
 
 <body>
   <header class="header">
-    <a class="logo" title="GllacyShop – магазин мороженого">
+    <a class="logo">
       <img class="logo__image" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
     </a>
 
     <nav class="main-menu">
       <h2 class="visually-hidden">Главное меню</h2>
       <ul class="main-menu__list">
-        <li class="main-menu__item">
+        <li class="main-menu__item popup-container">
           <a class="main-menu__link" href="/catalog.html">Каталог</a>
           <section class="catalog-menu popup">
             <h3 class="visually-hidden">Разделы каталога</h3>
@@ -48,30 +48,32 @@
 
     <nav class="user-menu">
       <h2 class="visually-hidden">Меню персонального раздела</h2>
-      <div class="user-menu__item">
-        <span class="nav-button nav-button_search">Поиск</span>
+      <div class="user-menu__item popup-container">
+        <a class="nav-button nav-button_search" href="#">Поиск</a>
         <section class="search-form popup">
           <h3 class="visually-hidden">Форма поиска</h3>
-          <form action="/search">
-            <!--TODO -->
+          <form action="https://echo.htmlacademy.ru" method="get" aria-label="Форма поиска">
+            <input type="search" name="text" placeholder="Что ищем?" aria-label="Поисковый запрос" required>
           </form>
         </section>
       </div>
-      <div class="user-menu__item">
-        <span class="nav-button nav-button_login">Вход</span>
+      <div class="user-menu__item popup-container">
+        <a class="nav-button nav-button_login" href="#">Вход</a>
         <section class="login-form popup">
           <h3 class="visually-hidden">Форма входа</h3>
-          <form action="/login">
-            <!--TODO -->
+          <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма входа">
+            <input type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
+            <input type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
+            <button type="submit">Войти</button>
           </form>
           <p class="login-form__links">
-            <a class="login-form__link" href="restore-password.html">Забыли пароль?</a>
-            <a class="login-form__link" href="registration.html">Новая регистрация</a>
+            <a class="login-form__link" href="#">Забыли пароль?</a>
+            <a class="login-form__link" href="#">Новая регистрация</a>
           </p>
         </section>
       </div>
       <div class="user-menu__item">
-        <span class="nav-button nav-button_empty-basket">Пусто</span>
+        <a class="nav-button nav-button_empty-basket" href="#">Корзина</a>
       </div>
     </nav>
 
@@ -88,29 +90,29 @@
     <section class="promo">
       <h2 class="visually-hidden">Акции</h2>
       <div class="promo__slider">
-        <input type="radio" id="promo-slider-1" name="promo-slider" checked>
-        <input type="radio" id="promo-slider-2" name="promo-slider">
-        <input type="radio" id="promo-slider-3" name="promo-slider">
+        <input class="visually-hidden" type="radio" id="promo-slider-1" name="promo-slider" checked>
+        <input class="visually-hidden" type="radio" id="promo-slider-2" name="promo-slider">
+        <input class="visually-hidden" type="radio" id="promo-slider-3" name="promo-slider">
         <div class="promo__slider-controls">
-          <label class="promo__slider-control" for="promo-slider-1"></label>
-          <label class="promo__slider-control" for="promo-slider-2"></label>
-          <label class="promo__slider-control" for="promo-slider-3"></label>
+          <label class="promo__slider-control" for="promo-slider-1">Крем-брюле и пломбир с малиновым джемом</label>
+          <label class="promo__slider-control" for="promo-slider-2">Шоколадный пломбир и лимонный сорбет</label>
+          <label class="promo__slider-control" for="promo-slider-3">Пломбир с помадкой и клубничный щербет</label>
         </div>
         <div class="promo__slides">
           <figure class="promo-slide">
             <figcaption class="promo-slide__tagline">Крем-брюле и пломбир с малиновым джемом</figcaption>
             <img class="promo-slide__image" src="img/promo-pair-green.png" width="647" height="584" alt="Крем-брюле и пломбир с малиновым джемом">
-            <span class="promo-button promo-button_large">Давайте оба!</span>
+            <button class="promo-button promo-button_large" type="button">Давайте оба!</button>
           </figure>
           <figure class="promo-slide">
             <figcaption class="promo-slide__tagline">Шоколадный пломбир и лимонный сорбет</figcaption>
             <img class="promo-slide__image" src="img/promo-pair-blue.png" width="644" height="582" alt="Шоколадный пломбир и лимонный сорбет">
-            <span class="promo-button promo-button_large">Давайте оба!</span>
+            <button class="promo-button promo-button_large" type="button">Давайте оба!</button>
           </figure>
           <figure class="promo-slide">
             <figcaption class="promo-slide__tagline">Пломбир с помадкой и клубничный щербет</figcaption>
             <img class="promo-slide__image" src="img/promo-pair-red.png" width="639" height="582" alt="Пломбир с помадкой и клубничный щербет">
-            <span class="promo-button promo-button_large">Давайте оба!</span>
+            <button class="promo-button promo-button_large" type="button">Давайте оба!</button>
           </figure>
         </div>
       </div>
@@ -118,53 +120,53 @@
 
     <section class="banners">
       <h2 class="visually-hidden">Специальные предложения</h2>
-      <div class="banner banner_raspberry">
-        <b class="banner__header">Малинка даром!</b>
+      <section class="banner banner_raspberry">
+        <h3 class="banner__header">Малинка даром!</h3>
         <p class="banner__description">При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
-        <span class="promo-button promo-button_medium">Хочу варенье!</span>
-      </div>
+        <button class="promo-button promo-button_medium" type="button">Хочу варенье!</button>
+      </section>
 
-      <div class="banner banner_chocolate">
-        <b class="banner__header">Шоколадки даром!</b>
+      <section class="banner banner_chocolate">
+        <h3 class="banner__header">Шоколадки даром!</h3>
         <p class="banner__description">При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки  совершенно бесплатно.</p>
-        <span class="promo-button promo-button_medium">Хочу шоколадки!</span>
-      </div>
+        <button class="promo-button promo-button_medium" type="button">Хочу шоколадки!</button>
+      </section>
     </section>
 
     <section class="bestsellers">
       <h2 class="visually-hidden">Хиты продаж</h2>
       <ul class="catalog-list">
-        <li class="catalog-list__item catalog-list__item_bestseller">
+        <li class="catalog-list__item catalog-list__item_bestseller popup-container">
           <a class="catalog-list__link" href="catalog-item.html">
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             <img src="img/icecream-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <p>310&#x584;<span>/кг</span></p>
           </a>
-          <span class="promo-button promo-button_medium">Быстрый просмотр</span>
+          <button class="promo-button promo-button_medium popup" type="button">Быстрый просмотр</button>
         </li>
-        <li class="catalog-list__item catalog-list__item_bestseller">
+        <li class="catalog-list__item catalog-list__item_bestseller popup-container">
           <a class="catalog-list__link" href="catalog-item.html">
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
             <img src="img/icecream-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             <p>380&#x584;<span>/кг</span></p>
           </a>
-          <span class="promo-button promo-button_medium">Быстрый просмотр</span>
+          <button class="promo-button promo-button_medium popup" type="button">Быстрый просмотр</button>
         </li>
-        <li class="catalog-list__item catalog-list__item_bestseller">
+        <li class="catalog-list__item catalog-list__item_bestseller popup-container">
           <a class="catalog-list__link" href="catalog-item.html">
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
             <img src="img/icecream-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p>355&#x584;<span>/кг</span></p>
           </a>
-          <span class="promo-button promo-button_medium">Быстрый просмотр</span>
+          <button class="promo-button promo-button_medium popup" type="button">Быстрый просмотр</button>
         </li>
-        <li class="catalog-list__item catalog-list__item_bestseller">
+        <li class="catalog-list__item catalog-list__item_bestseller popup-container">
           <a class="catalog-list__link" href="catalog-item.html">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
             <img src="img/icecream-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p>415&#x584;<span>/кг</span></p>
           </a>
-          <span class="promo-button promo-button_medium">Быстрый просмотр</span>
+          <button class="promo-button promo-button_medium popup" type="button">Быстрый просмотр</button>
         </li>
       </ul>
     </section>
@@ -181,14 +183,17 @@
 
     <aside class="blog-news">
       <h2 class="blog-news__header">Новое в нашем блоге</h2>
-      <p class="blog-news__post-title">10 способов сервировки фруктовых щербетов к столу</p>
+      <a class="blog-news__post-title" href="#">10 способов сервировки фруктовых щербетов к столу</a>
       <img class="blog-news__post-img" src="img/blog-post-img.jpg" width="560" height="220" alt="10 способов сервировки фруктовых щербетов к столу">
     </aside>
 
     <section class="subscribe">
       <h2 class="visually-hidden">Подписка на новостную рассылку</h2>
       <p class="subscribe-promo">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <form action="/subscribe"><!--TODO --></form>
+      <form action="https://echo.htmlacademy.ru" method="get" aria-label="Форма подписки на новостную рассылку">
+        <input type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
+        <button type="submit">Отправить</button>
+      </form>
     </section>
 
     <section class="location-map">
@@ -197,7 +202,7 @@
       <div class="location-map__overlay">
         <p>Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
         <p>Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
-        <span class="promo-button promo-button_medium">Форма обратной связи</span>
+        <a class="promo-button promo-button_medium" href="#">Форма обратной связи</a>
       </div>
     </section>
   </main>
@@ -206,10 +211,10 @@
     <section class="social">
       <h3 class="visually-hidden">Мы в социальных сетях</h3>
       <ul class="social__list">
-        <li class="social__item"><a class="social__link social__link_twitter" href="http://twitter.com">Twitter</a></li>
-        <li class="social__item"><a class="social__link social__link_instagram" href="http://instagram.com">Instagram</a></li>
-        <li class="social__item"><a class="social__link social__link_fb" href="http://fb.com">Facebook</a></li>
-        <li class="social__item"><a class="social__link social__link_vk" href="http://vk.com">Vkontakte</a></li>
+        <li class="social__item"><a class="social__link social__link_twitter" href="http://twitter.com" target="_blank">Twitter</a></li>
+        <li class="social__item"><a class="social__link social__link_instagram" href="http://instagram.com" target="_blank">Instagram</a></li>
+        <li class="social__item"><a class="social__link social__link_fb" href="http://fb.com" target="_blank">Facebook</a></li>
+        <li class="social__item"><a class="social__link social__link_vk" href="http://vk.com" target="_blank">Vkontakte</a></li>
       </ul>
     </section>
 
@@ -221,7 +226,7 @@
     </div>
 
     <div class="footer-copyright">
-      <a class="footer-copyright__logo" href="http://htmlacademy.ru" target="_blank" title="HTML Academy">
+      <a class="footer-copyright__logo" href="http://htmlacademy.ru" target="_blank">
         <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="HTML Academy">
       </a>
       <p class="footer-copyright__text">Сделано в <a href="http://htmlacademy.ru" target="_blank">HTML Academy</a> © 2017</p>
@@ -231,12 +236,18 @@
   <section class="feedback modal">
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <p class="feedback__tagline">Мы обязательно вам ответим!</p>
-    <form action="/feedback"><!--TODO --></form>
-    <span class="feedback__close-btn">Закрыть</span>
+    <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма обратной связи">
+      <input type="text" name="name" placeholder="Как вас зовут?" aria-label="Имя">
+      <input type="email" name="email" placeholder="Ваша почта для ответа?" aria-label="Электронная почта" required>
+      <textarea name="message" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-label="Текст сообщения" required></textarea>
+      <button type="submit">Отправить</button>
+    </form>
+    <button class="feedback__close-btn" type="button">Закрыть</button>
   </section>
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/location-map.js"></script>
+  <script src="js/popup-container.js"></script>
 </body>
 
 </html>

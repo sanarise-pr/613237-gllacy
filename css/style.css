@@ -2,7 +2,52 @@ body {
   background-color: #849d8f;
 }
 
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
 .location-map__container {
   width: 100%;
   height: 430px;
+}
+
+.popup-container:not(.popup-container_infocus):not(:hover) .popup {
+  /* visually-hidden */
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+#promo-slider-1:checked ~ .promo__slider-controls label[for='promo-slider-1'],
+#promo-slider-2:checked ~ .promo__slider-controls label[for='promo-slider-2'],
+#promo-slider-3:checked ~ .promo__slider-controls label[for='promo-slider-3'] {
+  color: blue;
+}
+
+.promo-slide {
+  display: none;
+}
+
+#promo-slider-1:checked ~ .promo__slides .promo-slide:nth-child(1),
+#promo-slider-2:checked ~ .promo__slides .promo-slide:nth-child(2),
+#promo-slider-3:checked ~ .promo__slides .promo-slide:nth-child(3) {
+  display: block;
 }
