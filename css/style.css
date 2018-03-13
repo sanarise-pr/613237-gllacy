@@ -1,5 +1,15 @@
-body {
+
+
+.page-green {
   background-color: #849d8f;
+}
+
+.page-blue {
+  background-color: #8996a6;
+}
+
+.page-red {
+  background-color: #9d8b84;
 }
 
 .visually-hidden {

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body>
+<body class="page-green">
   <header class="header">
     <a class="logo">
       <img class="logo__image" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
@@ -90,9 +90,9 @@
     <section class="promo">
       <h2 class="visually-hidden">Акции</h2>
       <div class="promo__slider">
-        <input class="visually-hidden" type="radio" id="promo-slider-1" name="promo-slider" checked>
-        <input class="visually-hidden" type="radio" id="promo-slider-2" name="promo-slider">
-        <input class="visually-hidden" type="radio" id="promo-slider-3" name="promo-slider">
+        <input class="promo__slider-input visually-hidden" type="radio" id="promo-slider-1" name="promo-slider" data-body-class="page-green" checked>
+        <input class="promo__slider-input visually-hidden" type="radio" id="promo-slider-2" name="promo-slider" data-body-class="page-blue">
+        <input class="promo__slider-input visually-hidden" type="radio" id="promo-slider-3" name="promo-slider" data-body-class="page-red">
         <div class="promo__slider-controls">
           <label class="promo__slider-control" for="promo-slider-1">Крем-брюле и пломбир с малиновым джемом</label>
           <label class="promo__slider-control" for="promo-slider-2">Шоколадный пломбир и лимонный сорбет</label>
@@ -248,6 +248,7 @@
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/location-map.js"></script>
   <script src="js/popup-container.js"></script>
+  <script src="./js/promo-bg-changer.js"></script>
 </body>
 
 </html>
