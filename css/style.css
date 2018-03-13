@@ -1,4 +1,7 @@
-
+body {
+  transition-duration: 0.2s;
+  transition-property: background-color;
+}
 
 .page-green {
   background-color: #849d8f;
