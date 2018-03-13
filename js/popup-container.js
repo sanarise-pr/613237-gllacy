@@ -20,6 +20,6 @@ function initPopupAnchor(element, className) {
   });
 }
 
-document.querySelectorAll('.popup-container').forEach(function(element) {
+Array.prototype.forEach.call(document.querySelectorAll('.popup-container'), function(element) {
   initPopupAnchor(element, 'popup-container_infocus');
 });
