@@ -1,8 +1,12 @@
 body {
   font-family: 'Roboto', Arial, sans-serif;
+  color: white;
 
   transition-duration: 0.2s;
   transition-property: background-color;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 .page-green {
@@ -29,6 +33,38 @@ body {
   border: 0;
 
   clip: rect(0 0 0 0);
+}
+
+@font-face {
+  font-weight: bold;
+  font-family: 'Custom Rouble';
+  font-style: normal;
+
+  src: url('../font/customrouble.woff2') format('woff2'), url('../font/customrouble.woff') format('woff');
+}
+
+.catalog-list__rouble {
+  padding-left: 4px;
+
+  font-size: 36px;
+  font-family: 'Custom Rouble';
+  vertical-align: 2px;
+}
+
+.catalog-list__link {
+  color: white;
+  text-decoration: none;
+  text-shadow: 2px 2px 3px rgba(49, 50, 53, 0.5);
+}
+
+.catalog-list__link p {
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.catalog-list__weight-unit {
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .location-map__container {
