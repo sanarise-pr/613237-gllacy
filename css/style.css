@@ -1,4 +1,5 @@
 body {
+  font-size: 16px;
   font-family: 'Roboto', Arial, sans-serif;
   color: white;
 
@@ -19,20 +20,6 @@ body {
 
 .page-red {
   background-color: #9d8b84;
-}
-
-.visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-
-  border: 0;
-
-  clip: rect(0 0 0 0);
 }
 
 @font-face {
@@ -67,9 +54,134 @@ body {
   font-size: 30px;
 }
 
+.catalog-menu {
+  padding: 10px 0;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+  color: #323232;
+  white-space: nowrap;
+}
+
+.catalog-menu__list {
+  padding: 0;
+
+  list-style: none;
+}
+
+.catalog-menu__link {
+  display: block;
+  padding: 10px;
+
+  color: #323232;
+  text-decoration: none;
+}
+
+.catalog-menu__link:hover,
+.catalog-menu__link:focus {
+  background-color: #fbded7;
+  outline: none;
+}
+
+.catalog-menu__link:active {
+  background-color: #f6b5a5;
+}
+
+.catalog-menu__link_current,
+.catalog-menu__link_current:hover,
+.catalog-menu__link_current:focus,
+.catalog-menu__link_current:active {
+  color: #ffffff;
+
+  background-color: #d07058;
+}
+
+.catalog-menu__link b {
+  font-weight: 700;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+}
+
+.main-menu {
+  font-weight: 700;
+  line-height: 18px;
+}
+
+.main-menu__list {
+  padding: 0;
+
+  list-style: none;
+}
+
+.main-menu__item {
+  display: inline-block;
+}
+
+.main-menu__link {
+  color: #ffffff;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.main-menu__link_catalog:hover,
+.main-menu__link_catalog:focus,
+.main-menu__link_catalog:active,
+.main-menu__link_catalog-current {
+  padding: 6px 14px;
+
+  border-bottom: none;
+  border-radius: 15px;
+  outline: none;
+}
+
+.main-menu__link_catalog:hover,
+.main-menu__link_catalog:focus {
+  color: #333333;
+
+  background-color: #f7f6f3;
+}
+
+.main-menu__link_catalog:active {
+  background-color: #ededed;
+}
+
+.main-menu__link_catalog-current {
+  color: #ffffff;
+
+  background-color: #d07058;
+}
+
+.main-menu__link_catalog:active,
+.main-menu__link_catalog-current:active {
+  box-shadow: inset 0 2px 1px 0 #696969;
+}
+
 .location-map__container {
   width: 100%;
   height: 430px;
+}
+
+.popup {
+  position: absolute;
+
+  overflow: hidden;
+
+  background-color: #f8f7f4;
+  border-radius: 10px;
 }
 
 .popup-container:not(.popup-container_infocus):not(:hover) .popup {
