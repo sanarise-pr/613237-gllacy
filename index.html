@@ -55,7 +55,7 @@
         <section class="search-form popup">
           <h3 class="visually-hidden">Форма поиска</h3>
           <form action="https://echo.htmlacademy.ru" method="get" aria-label="Форма поиска">
-            <input type="search" name="text" placeholder="Что ищем?" aria-label="Поисковый запрос" required>
+            <input class="text-input" type="search" name="text" placeholder="Что ищем?" aria-label="Поисковый запрос" required>
           </form>
         </section>
       </div>
@@ -64,13 +64,13 @@
         <section class="login-form popup">
           <h3 class="visually-hidden">Форма входа</h3>
           <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма входа">
-            <input type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
-            <input type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
-            <button type="submit">Войти</button>
+            <input class="text-input" type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
+            <input class="text-input" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
+            <button class="promo-button promo-button_medium" type="submit">Войти</button>
           </form>
           <p class="login-form__links">
-            <a class="login-form__link" href="#">Забыли пароль?</a>
-            <a class="login-form__link" href="#">Новая регистрация</a>
+            <a class="login-form__link dark-link" href="#">Забыли пароль?</a>
+            <a class="login-form__link dark-link" href="#">Новая регистрация</a>
           </p>
         </section>
       </div>
@@ -120,7 +120,7 @@
       </div>
     </section>
 
-    <section class="banners">
+    <section class="columns-container">
       <h2 class="visually-hidden">Специальные предложения</h2>
       <section class="banner banner_raspberry">
         <h3 class="banner__header">Малинка даром!</h3>
@@ -139,7 +139,7 @@
       <h2 class="visually-hidden">Хиты продаж</h2>
       <ul class="catalog-list">
         <li class="catalog-list__item catalog-list__item_bestseller popup-container">
-          <a class="catalog-list__link" href="catalog-item.html">
+          <a class="catalog-list__link" href="#">
             <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
             <img src="img/icecream-1.jpg" width="267" height="267" alt="Сливочное с апельсиновым джемом и цитрусовой стружкой">
             <p>310<span class="catalog-list__rouble">Р</span><span class="catalog-list__weight-unit">/кг</span></p>
@@ -147,7 +147,7 @@
           <button class="promo-button promo-button_medium popup" type="button">Быстрый просмотр</button>
         </li>
         <li class="catalog-list__item catalog-list__item_bestseller popup-container">
-          <a class="catalog-list__link" href="catalog-item.html">
+          <a class="catalog-list__link" href="#">
             <h3>Сливочно-кофейное с кусочками шоколада</h3>
             <img src="img/icecream-2.jpg" width="267" height="267" alt="Сливочно-кофейное с кусочками шоколада">
             <p>380<span class="catalog-list__rouble">Р</span><span class="catalog-list__weight-unit">/кг</span></p>
@@ -155,7 +155,7 @@
           <button class="promo-button promo-button_medium popup" type="button">Быстрый просмотр</button>
         </li>
         <li class="catalog-list__item catalog-list__item_bestseller popup-container">
-          <a class="catalog-list__link" href="catalog-item.html">
+          <a class="catalog-list__link" href="#">
             <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
             <img src="img/icecream-3.jpg" width="267" height="267" alt="Сливочно-клубничное с присыпкой из белого шоколада">
             <p>355<span class="catalog-list__rouble">Р</span><span class="catalog-list__weight-unit">/кг</span></p>
@@ -163,7 +163,7 @@
           <button class="promo-button promo-button_medium popup" type="button">Быстрый просмотр</button>
         </li>
         <li class="catalog-list__item catalog-list__item_bestseller popup-container">
-          <a class="catalog-list__link" href="catalog-item.html">
+          <a class="catalog-list__link" href="#">
             <h3>Сливочное крем-брюле с карамельной подливкой</h3>
             <img src="img/icecream-4.jpg" width="267" height="267" alt="Сливочное крем-брюле с карамельной подливкой">
             <p>415<span class="catalog-list__rouble">Р</span><span class="catalog-list__weight-unit">/кг</span></p>
@@ -174,36 +174,40 @@
     </section>
 
     <section class="about-us">
-      <h2>Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
-      <ul class="advantages__list">
-        <li class="advantages__item advantages__item_tech">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
-        <li class="advantages__item advantages__item_eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
-        <li class="advantages__item advantages__item_cows">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
-        <li class="advantages__item advantages__item_temp">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
+      <h2 class="about-us__header">Магазин Глэйси — это онлайн- и офлайн-магазин по продаже мороженого собственного производства на развес</h2>
+      <ul class="about-us__advantages">
+        <li class="about-us__advantage about-us__advantage_tech">Все наше мороженое изготавливается на собственном производстве, с использованием современного оборудования и проверенных временем технологий.</li>
+        <li class="about-us__advantage about-us__advantage_eco">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные ингредиенты и добавки произведены из натурального, экологически чистого сырья.</li>
+        <li class="about-us__advantage about-us__advantage_cows">Закупка ингредиентов  производится только у проверенных фермерских хозяйств и компаний, с которыми нас связывает долговременное сотрудничество.</li>
+        <li class="about-us__advantage about-us__advantage_temp">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому растаять в пути и позволяет сохранить превосходный вкус.</li>
       </ul>
     </section>
 
-    <aside class="blog-news">
-      <h2 class="blog-news__header">Новое в нашем блоге</h2>
-      <a class="blog-news__post-title" href="#">10 способов сервировки фруктовых щербетов к столу</a>
-      <img class="blog-news__post-img" src="img/blog-post-img.jpg" width="560" height="220" alt="10 способов сервировки фруктовых щербетов к столу">
-    </aside>
+    <div class="columns-container">
+      <aside class="blog-news">
+        <h2 class="blog-news__header">Новое в нашем блоге</h2>
+        <a class="blog-news__post-title" href="#">10 способов сервировки фруктовых щербетов к столу</a>
+        <img class="blog-news__post-img" src="img/blog-post-img.jpg" width="560" height="220" alt="10 способов сервировки фруктовых щербетов к столу">
+      </aside>
 
-    <section class="subscribe">
-      <h2 class="visually-hidden">Подписка на новостную рассылку</h2>
-      <p class="subscribe-promo">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
-      <form action="https://echo.htmlacademy.ru" method="get" aria-label="Форма подписки на новостную рассылку">
-        <input type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
-        <button type="submit">Отправить</button>
-      </form>
-    </section>
+      <section class="subscribe">
+        <div class="subscribe__inner-container">
+          <h2 class="visually-hidden">Подписка на новостную рассылку</h2>
+          <p class="subscribe-promo">Подпишитесь на нашу сладкую рассылку и будете всегда в курсе всего самого вкусного, что у нас происходит. Обещаем не спамить и не слать всякой ненужной ерунды. Честно =)</p>
+          <form action="https://echo.htmlacademy.ru" method="get" aria-label="Форма подписки на новостную рассылку">
+            <input class="text-input" type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
+            <button class="promo-button promo-button_medium" type="submit">Отправить</button>
+          </form>
+        </div>
+      </section>
+    </div>
 
     <section class="location-map">
       <h2 class="visually-hidden">Cхема проезда и контактная информация</h2>
       <div class="location-map__container" id="location-map"></div>
       <div class="location-map__overlay">
-        <p>Адрес главного офиса и офлайн-магазина: <b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
-        <p>Для заказов по телефону: <b>8 812 450-25-25</b> (с 10 до 20 ежедневно)</p>
+        <p>Адрес главного офиса и офлайн-магазина:<br><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
+        <p>Для заказов по телефону:<br><b>8 812 450-25-25</b><br>(с 10 до 20 ежедневно)</p>
         <a class="promo-button promo-button_medium" href="#">Форма обратной связи</a>
       </div>
     </section>
@@ -220,18 +224,18 @@
       </ul>
     </section>
 
-    <div class="footer-menu">
-      <a class="footer-menu__item footer-menu__item_heart" href="#">Для поставщиков</a>
-      <a class="footer-menu__item" href="#">О производстве</a>
-      <a class="footer-menu__item" href="#">Наши документы</a>
-      <a class="footer-menu__item" href="#">Экологические стандарты</a>
+    <div class="footer__menu">
+      <a class="footer__menu-link light-link footer__menu-link_heart" href="#">Для поставщиков</a>
+      <a class="footer__menu-link light-link" href="#">О производстве</a>
+      <a class="footer__menu-link light-link" href="#">Наши документы</a>
+      <a class="footer__menu-link light-link" href="#">Экологические стандарты</a>
     </div>
 
-    <div class="footer-copyright">
-      <a class="footer-copyright__logo" href="http://htmlacademy.ru" target="_blank">
-        <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="HTML Academy">
+    <div class="footer__copyright">
+      <a class="footer__copyright-logo" href="http://htmlacademy.ru" target="_blank">
+        <img src="img/logo-htmlacademy-small.svg" width="108" height="38" alt="HTML Academy">
       </a>
-      <p class="footer-copyright__text">Сделано в <a href="http://htmlacademy.ru" target="_blank">HTML Academy</a> © 2017</p>
+      <p class="footer__copyright-text">Сделано в <a class="light-link" href="http://htmlacademy.ru" target="_blank">HTML Academy</a> © 2017</p>
     </div>
   </footer>
 
@@ -239,10 +243,10 @@
     <h2 class="visually-hidden">Форма обратной связи</h2>
     <p class="feedback__tagline">Мы обязательно вам ответим!</p>
     <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма обратной связи">
-      <input type="text" name="name" placeholder="Как вас зовут?" aria-label="Имя">
-      <input type="email" name="email" placeholder="Ваша почта для ответа?" aria-label="Электронная почта" required>
-      <textarea name="message" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-label="Текст сообщения" required></textarea>
-      <button type="submit">Отправить</button>
+      <input class="text-input" type="text" name="name" placeholder="Как вас зовут?" aria-label="Имя">
+      <input class="text-input" type="email" name="email" placeholder="Ваша почта для ответа?" aria-label="Электронная почта" required>
+      <textarea class="text-input" name="message" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-label="Текст сообщения" required></textarea>
+      <button class="promo-button promo-button_medium" type="submit">Отправить</button>
     </form>
     <button class="feedback__close-btn" type="button">Закрыть</button>
   </section>

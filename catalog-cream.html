@@ -55,7 +55,7 @@
         <section class="search-form popup">
           <h3 class="visually-hidden">Форма поиска</h3>
           <form action="https://echo.htmlacademy.ru" method="get" aria-label="Форма поиска">
-            <input type="search" name="text" placeholder="Что ищем?" aria-label="Поисковый запрос" required>
+            <input class="text-input" type="search" name="text" placeholder="Что ищем?" aria-label="Поисковый запрос" required>
           </form>
         </section>
       </div>
@@ -64,13 +64,13 @@
         <section class="login-form popup">
           <h3 class="visually-hidden">Форма входа</h3>
           <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма входа">
-            <input type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
-            <input type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
-            <button type="submit">Войти</button>
+            <input class="text-input" type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
+            <input class="text-input" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
+            <button class="promo-button promo-button_medium" type="submit">Войти</button>
           </form>
           <p class="login-form__links">
-            <a class="login-form__link" href="#">Забыли пароль?</a>
-            <a class="login-form__link" href="#">Новая регистрация</a>
+            <a class="login-form__link dark-link" href="#">Забыли пароль?</a>
+            <a class="login-form__link dark-link" href="#">Новая регистрация</a>
           </p>
         </section>
       </div>
@@ -98,7 +98,7 @@
           <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма оформления заказа">
             <input type="hidden" name="id" value="1">
             <input type="hidden" name="id" value="3">
-            <button type="submit">Оформить заказ</button>
+            <button class="promo-button promo-button_medium" type="submit">Оформить заказ</button>
           </form>
         </section>
       </div>
@@ -107,8 +107,8 @@
     <nav class="breadcrumbs">
       <h2 class="visually-hidden">Навигационная цепочка</h2>
       <ul class="breadcrumbs__list">
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="index.html">Главная</a></li>
-        <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="catalog.html">Каталог</a></li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link light-link" href="index.html">Главная</a> »</li>
+        <li class="breadcrumbs__item"><a class="breadcrumbs__link light-link" href="catalog.html">Каталог</a> »</li>
         <li class="breadcrumbs__item"><a class="breadcrumbs__link">Сливочное</a></li>
       </ul>
     </nav>
@@ -121,26 +121,27 @@
   </header>
 
   <main class="main-container">
-    <h1 class="catalog-header">Сливочное мороженое</h1>
+    <h1 class="main-container__header">Сливочное мороженое</h1>
 
     <section class="catalog-filter">
       <h2 class="visually-hidden">Фильтры каталога</h2>
       <form action="https://echo.htmlacademy.ru" method="post" aria-label="Фильтры каталога">
         <fieldset>
-          <legend>Сортировка:</legend>
+          <legend class="catalog-filter__legend">Сортировка:</legend>
           <select name="sort" aria-label="Сортировка">
             <option value="popularity">по популярности</option>
-            <option value="price">по цене</option>
+            <option value="low-price">сначала недорогие</option>
+            <option value="high-price">сначала дорогие</option>
+            <option value="fatness">по жирности</option>
           </select>
         </fieldset>
         <fieldset>
-          <legend>Цена:</legend>
-          <output>100руб. - 500руб.</output>
+          <div class="catalog-filter__legend"><legend>Цена:</legend><output>100руб. - 500руб.</output></div>
           <input type="range" name="min-price" min="0" max="800" step="100" value="100" aria-label="Минимальная цена">
           <input type="range" name="max-price" min="0" max="800" step="100" value="500" aria-label="Максимальная цена">
         </fieldset>
         <fieldset>
-          <legend>Жирность:</legend>
+          <legend class="catalog-filter__legend">Жирность:</legend>
           <p>
             <input type="radio" name="fatness" id="catalog-filter-fatness-1" value="0">
             <label for="catalog-filter-fatness-1">0%</label>
@@ -159,7 +160,7 @@
           </p>
         </fieldset>
         <fieldset>
-          <legend>Наполнители:</legend>
+          <legend class="catalog-filter__legend">Наполнители:</legend>
           <p>
             <input type="checkbox" name="fillers" id="catalog-filter-fillers-1" value="chocolate" checked>
             <label for="catalog-filter-fillers-1">шоколадные</label>
@@ -289,17 +290,17 @@
       </ul>
     </section>
 
-    <nav class="catalog-pagination">
+    <nav class="pagination">
       <h2 class="visually-hidden">Постраничная навигация каталога</h2>
-      <a class="catalog-pagination__prev catalog-pagination__prev_disabled">Назад</a>
-      <ol class="catalog-pagination__list" aria-label="Страницы каталога">
-        <li class="catalog-pagination__item catalog-pagination__current"><a>Страница 1</a></li>
-        <li class="catalog-pagination__item"><a href="#">Страница 2</a></li>
-        <li class="catalog-pagination__item"><a href="#">Страница 3</a></li>
-        <li class="catalog-pagination__item"><a href="#">Страница 4</a></li>
-        <li class="catalog-pagination__item"><a href="#">Страница 5</a></li>
+      <a class="pagination__prev pagination__prev_disabled">Назад</a>
+      <ol class="pagination__list" aria-label="Страницы каталога">
+        <li class="pagination__item"><a class="pagination__link pagination__link_current">Страница 1</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#">Страница 2</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#">Страница 3</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#">Страница 4</a></li>
+        <li class="pagination__item"><a class="pagination__link" href="#">Страница 5</a></li>
       </ol>
-      <a href="#" class="catalog-pagination__next">Вперед</a>
+      <a href="#" class="pagination__next">Вперед</a>
     </nav>
   </main>
 
@@ -314,18 +315,18 @@
       </ul>
     </section>
 
-    <div class="footer-menu">
-      <a class="footer-menu__item footer-menu__item_heart" href="#">Для поставщиков</a>
-      <a class="footer-menu__item" href="#">О производстве</a>
-      <a class="footer-menu__item" href="#">Наши документы</a>
-      <a class="footer-menu__item" href="#">Экологические стандарты</a>
+    <div class="footer__menu">
+      <a class="footer__menu-link light-link footer__menu-link_heart" href="#">Для поставщиков</a>
+      <a class="footer__menu-link light-link" href="#">О производстве</a>
+      <a class="footer__menu-link light-link" href="#">Наши документы</a>
+      <a class="footer__menu-link light-link" href="#">Экологические стандарты</a>
     </div>
 
-    <div class="footer-copyright">
-      <a class="footer-copyright__logo" href="http://htmlacademy.ru" target="_blank">
-        <img src="img/logo-htmlacademy-small.svg" width="108" height="39" alt="HTML Academy">
+    <div class="footer__copyright">
+      <a class="footer__copyright-logo" href="http://htmlacademy.ru" target="_blank">
+        <img src="img/logo-htmlacademy-small.svg" width="108" height="38" alt="HTML Academy">
       </a>
-      <p class="footer-copyright__text">Сделано в <a href="http://htmlacademy.ru" target="_blank">HTML Academy</a> © 2017</p>
+      <p class="footer__copyright-text">Сделано в <a class="light-link" href="http://htmlacademy.ru" target="_blank">HTML Academy</a> © 2017</p>
     </div>
   </footer>
 
