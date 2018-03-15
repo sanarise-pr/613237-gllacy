@@ -235,12 +235,23 @@ body {
 }
 
 .catalog-list__item {
+  position: relative;
+
   width: 25%;
 }
 
 .catalog-list__item button {
   display: block;
   margin: 0 auto;
+}
+
+.catalog-list__item_infocus,
+.catalog-list__item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.catalog-list__item:not(.catalog-list__item_infocus):not(:hover) button {
+  display: none;
 }
 
 .catalog-list__link {
@@ -258,6 +269,8 @@ body {
 .catalog-list__link img {
   width: 100%;
   height: auto;
+
+  border-radius: 50%;
 }
 
 .catalog-list__link p {

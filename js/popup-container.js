@@ -20,6 +20,13 @@ function initPopupAnchor(element, className) {
   });
 }
 
+// TODO: переименовать файл, т.к. он касается не только попапа, 
+// а скорее про ловлю фокуса на дочерних элементах
+
 Array.prototype.forEach.call(document.querySelectorAll('.popup-container'), function(element) {
   initPopupAnchor(element, 'popup-container_infocus');
+});
+
+Array.prototype.forEach.call(document.querySelectorAll('.catalog-list__item'), function(element) {
+  initPopupAnchor(element, 'catalog-list__item_infocus');
 });
