@@ -730,10 +730,47 @@ body {
   text-align: center;
 }
 
-#promo-slider-1:checked ~ .promo__slider-controls label[for='promo-slider-1'],
-#promo-slider-2:checked ~ .promo__slider-controls label[for='promo-slider-2'],
-#promo-slider-3:checked ~ .promo__slider-controls label[for='promo-slider-3'] {
-  color: blue;
+.promo__slider-controls {
+  display: inline-block;
+  padding: 2px;
+
+  line-height: 0;
+
+  border-radius: 12px;
+}
+
+.promo__slider-control {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 21px;
+  height: 21px;
+  overflow: hidden;
+
+  color: transparent;
+  /* padding-left: 100px; */ /* Почему-то растягивает блок, хотя вроде не должен. */
+
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  cursor: pointer;
+
+  user-select: none;
+}
+
+#promo-slider-1:hover ~ .promo__slider-controls label:nth-child(1),
+#promo-slider-2:hover ~ .promo__slider-controls label:nth-child(2),
+#promo-slider-3:hover ~ .promo__slider-controls label:nth-child(3) {
+  background-color: rgba(248, 247, 244, 0.4);
+}
+
+.promo__slider-input:focus ~ .promo__slider-controls,
+.promo__slider-input:active ~ .promo__slider-controls {
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4);
+}
+
+#promo-slider-1:checked ~ .promo__slider-controls label:nth-child(1),
+#promo-slider-2:checked ~ .promo__slider-controls label:nth-child(2),
+#promo-slider-3:checked ~ .promo__slider-controls label:nth-child(3) {
+  background-color: #ffffff;
 }
 
 .promo-slide {
