@@ -11,79 +11,82 @@
 
 <body class="page-green">
   <header class="header">
-    <a class="logo">
-      <img class="logo__image" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
-    </a>
+    <div class="header__main-row">
+      <a class="logo">
+        <img class="logo__image" src="img/logo.svg" width="154" height="64" alt="Логотип GllacyShop">
+      </a>
 
-    <nav class="main-menu">
-      <h2 class="visually-hidden">Главное меню</h2>
-      <ul class="main-menu__list">
-        <li class="main-menu__item popup-container">
-          <a class="main-menu__link main-menu__link_catalog" href="/catalog.html">Каталог</a>
-          <section class="catalog-menu popup">
-            <h3 class="visually-hidden">Разделы каталога</h3>
-            <a href="catalog-new.html" class="catalog-menu__link"><b>Новинки</b></a>
-            <ul class="catalog-menu__list">
-              <li class="catalog-menu__item">
-                <a href="catalog-cream.html" class="catalog-menu__link">Сливочное</a>
-              </li>
-              <li class="catalog-menu__item">
-                <a href="catalog-sherbet.html" class="catalog-menu__link">Щербеты</a>
-              </li>
-              <li class="catalog-menu__item">
-                <a href="catalog-ice.html" class="catalog-menu__link">Фруктовый лед</a>
-              </li>
-              <li class="catalog-menu__item">
-                <a href="catalog-melorin.html" class="catalog-menu__link">Мелорин</a>
-              </li>
-            </ul>
+      <nav class="main-menu">
+        <h2 class="visually-hidden">Главное меню</h2>
+        <ul class="main-menu__list">
+          <li class="main-menu__item popup-container">
+            <a class="main-menu__link" href="catalog-cream.html">Каталог</a>
+            <section class="catalog-menu popup">
+              <h3 class="visually-hidden">Разделы каталога</h3>
+              <a href="catalog-new.html" class="catalog-menu__link"><b>Новинки</b></a>
+              <ul class="catalog-menu__list">
+                <li class="catalog-menu__item">
+                  <a href="catalog-cream.html" class="catalog-menu__link">Сливочное</a>
+                </li>
+                <li class="catalog-menu__item">
+                  <a href="catalog-sherbet.html" class="catalog-menu__link">Щербеты</a>
+                </li>
+                <li class="catalog-menu__item">
+                  <a href="catalog-ice.html" class="catalog-menu__link">Фруктовый лед</a>
+                </li>
+                <li class="catalog-menu__item">
+                  <a href="catalog-melorin.html" class="catalog-menu__link">Мелорин</a>
+                </li>
+              </ul>
+            </section>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="delivery.html">Доставка и оплата</a>
+          </li>
+          <li class="main-menu__item">
+            <a class="main-menu__link" href="about.html">О Компании</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav class="user-menu">
+        <h2 class="visually-hidden">Меню персонального раздела</h2>
+        <div class="user-menu__item popup-container">
+          <a class="user-menu__link user-menu__link_search" href="#">Поиск</a>
+          <section class="search-form popup">
+            <h3 class="visually-hidden">Форма поиска</h3>
+            <form action="https://echo.htmlacademy.ru" method="get" aria-label="Форма поиска">
+              <input class="text-input" type="search" name="text" placeholder="Что ищем?" aria-label="Поисковый запрос" required>
+            </form>
           </section>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="delivery.html">Доставка и оплата</a>
-        </li>
-        <li class="main-menu__item">
-          <a class="main-menu__link" href="about.html">О Компании</a>
-        </li>
-      </ul>
-    </nav>
-
-    <nav class="user-menu">
-      <h2 class="visually-hidden">Меню персонального раздела</h2>
-      <div class="user-menu__item popup-container">
-        <a class="user-menu__link user-menu__link_search" href="#">Поиск</a>
-        <section class="search-form popup">
-          <h3 class="visually-hidden">Форма поиска</h3>
-          <form action="https://echo.htmlacademy.ru" method="get" aria-label="Форма поиска">
-            <input class="text-input" type="search" name="text" placeholder="Что ищем?" aria-label="Поисковый запрос" required>
-          </form>
-        </section>
-      </div>
-      <div class="user-menu__item popup-container">
-        <a class="user-menu__link user-menu__link_login" href="#">Вход</a>
-        <section class="login-form popup">
-          <h3 class="visually-hidden">Форма входа</h3>
-          <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма входа">
-            <input class="text-input" type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
-            <input class="text-input" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
-            <button class="promo-button promo-button_medium" type="submit">Войти</button>
-          </form>
-          <p class="login-form__links">
-            <a class="login-form__link dark-link" href="#">Забыли пароль?</a>
-            <a class="login-form__link dark-link" href="#">Новая регистрация</a>
-          </p>
-        </section>
-      </div>
-      <div class="user-menu__item">
-        <a class="user-menu__link user-menu__link_empty-basket" href="#">Корзина</a>
-      </div>
-    </nav>
-
-    <section class="header__contact-info">
-      <h3 class="visually-hidden">Контактная информация</h3>
-      <p class="header__working-hours">С 10 до 20, ежедневно</p>
-      <p class="header__contact-tel">8 812 450-25-25</p>
-    </section>
+        </div>
+        <div class="user-menu__item popup-container">
+          <a class="user-menu__link user-menu__link_login" href="#">Вход</a>
+          <section class="login-form popup">
+            <h3 class="visually-hidden">Форма входа</h3>
+            <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма входа">
+              <input class="text-input" type="email" name="email" placeholder="Электронная почта" aria-label="Электронная почта" required>
+              <input class="text-input" type="password" name="password" placeholder="Пароль" aria-label="Пароль" required>
+              <button class="promo-button promo-button_medium" type="submit">Войти</button>
+            </form>
+            <p class="login-form__links">
+              <a class="login-form__link dark-link" href="#">Забыли пароль?</a>
+              <a class="login-form__link dark-link" href="#">Новая регистрация</a>
+            </p>
+          </section>
+        </div>
+        <div class="user-menu__item">
+          <a class="user-menu__link user-menu__link_empty-basket" href="#">Корзина</a>
+        </div>
+      </nav>
+    </div>
+    <div class="header__sub-row">
+      <section class="header__contact-info">
+        <h3 class="visually-hidden">Контактная информация</h3>
+        <p class="header__working-hours">С 10 до 20, ежедневно</p>
+        <p class="header__contact-tel">8 812 450-25-25</p>
+      </section>
+    </div>
   </header>
 
   <main class="main-container">

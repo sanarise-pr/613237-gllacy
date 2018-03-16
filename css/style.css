@@ -123,6 +123,10 @@
 }
 
 body {
+  min-width: 900px;
+  max-width: 1200px;
+  margin: 0 auto;
+
   font-size: 16px;
   font-family: 'Roboto', Arial, sans-serif;
   color: white;
@@ -149,6 +153,8 @@ body {
 
 
 .breadcrumbs__list {
+  padding: 0;
+
   list-style: none;
 }
 
@@ -444,6 +450,25 @@ body {
   line-height: 18px;
 }
 
+.header {
+  padding: 0 2.3%;
+}
+
+.header__main-row,
+.header__sub-row {
+  display: flex;
+}
+
+.header__contact-info {
+  margin-left: auto;
+
+  text-align: right;
+}
+
+.header__contact-info p {
+  margin: 0;
+}
+
 .header__working-hours {
   font-weight: 700;
   font-size: 14px;
@@ -534,6 +559,8 @@ body {
 }
 
 .main-menu {
+  margin-right: auto;
+
   font-weight: 700;
   line-height: 18px;
 }
@@ -555,10 +582,10 @@ body {
   border-bottom: 1px solid rgba(255, 255, 255, 0.4);
 }
 
-.main-menu__link_catalog:hover,
-.main-menu__link_catalog:focus,
-.main-menu__link_catalog:active,
-.main-menu__link_catalog-current {
+.main-menu__link:hover,
+.main-menu__link:focus,
+.main-menu__link:active,
+.main-menu__link_current {
   padding: 6px 14px;
 
   border-bottom: none;
@@ -566,25 +593,25 @@ body {
   outline: none;
 }
 
-.main-menu__link_catalog:hover,
-.main-menu__link_catalog:focus {
+.main-menu__link:hover,
+.main-menu__link:focus {
   color: #333333;
 
   background-color: #f7f6f3;
 }
 
-.main-menu__link_catalog:active {
+.main-menu__link:active {
   background-color: #ededed;
 }
 
-.main-menu__link_catalog-current {
+.main-menu__link_current {
   color: #ffffff;
 
   background-color: #d07058;
 }
 
-.main-menu__link_catalog:active,
-.main-menu__link_catalog-current:active {
+.main-menu__link:active,
+.main-menu__link_current:active {
   box-shadow: inset 0 2px 1px 0 #696969;
 }
 
