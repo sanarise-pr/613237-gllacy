@@ -723,18 +723,18 @@ body {
   border-radius: 40px;
 }
 
-.promo-slide__tagline {
-  font-weight: 700;
-  font-size: 60px;
-  line-height: 60px;
-  text-align: center;
+.promo {
+  position: relative;
 }
 
 .promo__slider-controls {
-  display: inline-block;
-  padding: 2px;
+  position: absolute;
+  bottom: 20px;
+  z-index: 1;
 
-  line-height: 0;
+  display: flex;
+  margin-left: calc(2.3% - 2px);
+  padding: 2px;
 
   border-radius: 12px;
 }
@@ -756,6 +756,10 @@ body {
   user-select: none;
 }
 
+.promo__slider-control:not(:last-of-type) {
+  margin-right: 8px;
+}
+
 #promo-slider-1:hover ~ .promo__slider-controls label:nth-child(1),
 #promo-slider-2:hover ~ .promo__slider-controls label:nth-child(2),
 #promo-slider-3:hover ~ .promo__slider-controls label:nth-child(3) {
@@ -774,13 +778,65 @@ body {
 }
 
 .promo-slide {
+  position: relative;
+
   display: none;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
 }
 
 #promo-slider-1:checked ~ .promo__slides .promo-slide:nth-child(1),
 #promo-slider-2:checked ~ .promo__slides .promo-slide:nth-child(2),
 #promo-slider-3:checked ~ .promo__slides .promo-slide:nth-child(3) {
-  display: block;
+  display: flex;
+}
+
+.promo-slide::before {
+  content: '';
+  position: absolute;
+  top: -300px;
+  left: 0;
+  z-index: -1;
+
+  width: 100%;
+  height: 1000px;
+}
+
+#promo-slider-1:checked ~ .promo__slides .promo-slide:nth-child(1)::before {
+  background-image: radial-gradient(circle 500px, #cff6e1, transparent);
+}
+
+#promo-slider-2:checked ~ .promo__slides .promo-slide:nth-child(2)::before {
+  background-image: radial-gradient(circle 500px, #d6ebfc, transparent);
+}
+
+#promo-slider-3:checked ~ .promo__slides .promo-slide:nth-child(3)::before {
+  background-image: radial-gradient(circle 500px, #fae4db, transparent);
+}
+
+.promo-slide__image {
+  position: relative;
+  z-index: -1;
+
+  flex-basis: 300px;
+}
+
+.promo-slide__image img {
+  margin-bottom: -50%;
+}
+
+.promo-slide__tagline {
+  order: 1;
+
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 60px;
+  text-align: center;
+}
+
+.promo-slide .promo-button {
+  order: 2;
 }
 
 .search-form {
