@@ -32,10 +32,29 @@
   padding-left: 50px;
 }
 
+.banners {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .banner {
-  padding: 10px 20px;
+  position: relative;
+
+  box-sizing: border-box;
+  max-width: 46.6%;
+  min-height: 229px;
+  padding: 16px 20px 69px 20px;
 
   border-radius: 20px;
+}
+
+.banner:nth-of-type(2n+1) {
+  margin-right: 2.2%;
+  margin-left: 2.3%;
+}
+
+.banner:nth-of-type(2n) {
+  margin-right: 2.3%;
 }
 
 .banner_raspberry {
@@ -55,9 +74,18 @@
 }
 
 .banner__description {
+  margin: 0;
+  margin-top: 15px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
+}
+
+.banner .promo-button {
+  position: absolute;
+  right: 20px;
+  bottom: 23px;
 }
 
 .basket-form {
@@ -681,6 +709,8 @@ body {
 }
 
 .promo-button {
+  display: block;
+
   font: inherit;
   font-weight: 700;
   color: #ffffff;
@@ -753,7 +783,7 @@ body {
   overflow: hidden;
 
   color: transparent;
-  /* padding-left: 100px; */ /* Почему-то растягивает блок, хотя вроде не должен. */
+  /* padding-left: 100px; */ /* TODO Почему-то растягивает блок, хотя вроде не должен. */
 
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -834,6 +864,7 @@ body {
 
 .promo-slide__tagline {
   order: 1;
+  max-width: 700px; /* TODO Временно */
 
   font-weight: 700;
   font-size: 60px;
