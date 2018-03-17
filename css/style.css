@@ -35,6 +35,7 @@
 .banners {
   display: flex;
   flex-wrap: wrap;
+  margin-top: 41px;
 }
 
 .banner {
@@ -43,9 +44,10 @@
   box-sizing: border-box;
   max-width: 46.6%;
   min-height: 229px;
-  padding: 16px 20px 69px 20px;
+  padding: 16px 20px 69px 18px;
 
-  border-radius: 20px;
+  background-position: 50% 50%;
+  border-radius: 15px;
 }
 
 .banner:nth-of-type(2n+1) {
@@ -85,7 +87,7 @@
 .banner .promo-button {
   position: absolute;
   right: 20px;
-  bottom: 23px;
+  bottom: 24px;
 }
 
 .basket-form {
@@ -479,7 +481,7 @@ body {
 }
 
 .header {
-  padding: 0 2.3%;
+  padding: 0 calc(2.3% - 1px);
 }
 
 .header__main-row,
@@ -493,17 +495,19 @@ body {
   text-align: right;
 }
 
-.header__contact-info p {
-  margin: 0;
-}
-
 .header__working-hours {
+  margin: 0;
+  margin-top: -5px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
 }
 
 .header__contact-tel {
+  margin: 0;
+  margin-top: 5px;
+
   font-weight: 700;
   font-size: 22px;
   line-height: 24px;
@@ -580,6 +584,10 @@ body {
   line-height: 16px;
 }
 
+.logo {
+  margin-top: 9px;
+}
+
 .main-container__header {
   font-weight: 700;
   font-size: 35px;
@@ -587,20 +595,23 @@ body {
 }
 
 .main-menu {
+  margin-top: 14px;
   margin-right: auto;
+  margin-left: 24px;
 
   font-weight: 700;
   line-height: 18px;
 }
 
 .main-menu__list {
+  display: flex;
   padding: 0;
 
   list-style: none;
 }
 
 .main-menu__item {
-  display: inline-block;
+  margin-right: 28px;
 }
 
 .main-menu__link {
@@ -750,8 +761,8 @@ body {
 .promo-button_large {
   box-sizing: border-box;
   height: 63px;
-  padding-right: 40px;
-  padding-left: 40px;
+  padding: 0 40px;
+  padding-bottom: 3px;
 
   font-size: 32px;
   line-height: 44px;
@@ -769,21 +780,21 @@ body {
   z-index: 1;
 
   display: flex;
-  margin-left: calc(2.3% - 2px);
+  margin-left: calc(2.3% - 3px); /* 1px - коррекция, 2px - компенсация padding*/
   padding: 2px;
 
   border-radius: 12px;
 }
 
 .promo__slider-control {
-  display: inline-block;
   box-sizing: border-box;
   width: 21px;
   height: 21px;
   overflow: hidden;
 
   color: transparent;
-  /* padding-left: 100px; */ /* TODO Почему-то растягивает блок, хотя вроде не должен. */
+  /* TODO Почему-то растягивает блок, хотя вроде не должен. */
+  /* padding-left: 100px; */
 
   border: 2px solid #ffffff;
   border-radius: 50%;
@@ -852,14 +863,16 @@ body {
 }
 
 .promo-slide__image {
-  position: relative;
   z-index: -1;
 
-  flex-basis: 300px;
+  align-self: stretch;
+  height: 276px;
 }
 
 .promo-slide__image img {
-  margin-bottom: -50%;
+  display: block;
+  height: auto; /* TODO Странно что помогает */
+  margin: -34px auto 0;
 }
 
 .promo-slide__tagline {
@@ -874,6 +887,7 @@ body {
 
 .promo-slide .promo-button {
   order: 2;
+  margin-top: 30px;
 }
 
 .search-form {
