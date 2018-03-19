@@ -1,4 +1,5 @@
 .about-us {
+  margin-top: 40px;
   padding: 10px 20px;
 
   color: #323232;
@@ -265,6 +266,8 @@ body {
 .catalog-list {
   display: flex;
   flex-wrap: wrap;
+  align-items: flex-start;
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -273,29 +276,69 @@ body {
 .catalog-list__item {
   position: relative;
 
-  width: 25%;
+  width: 22.2%;
+  margin-top: 40px;
+  margin-left: 2.2%;
 }
 
-.catalog-list__item button {
-  display: block;
-  margin: 0 auto;
+.catalog-list__item:nth-child(4n+1) {
+  margin-left: 2.3%;
+}
+
+.catalog-list__item:nth-child(4n) {
+  margin-right: 2.3%;
+}
+
+.catalog-list__popup {
+  position: absolute;
+  bottom: calc(-8% - 55px);
+  left: -5%;
+  z-index: -1;
+
+  display: flex;
+  flex-direction: column;
+  width: 110%;
+  height: calc(108% + 55px + 6px);
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.1);
 }
 
 .catalog-list__item_infocus,
 .catalog-list__item:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  z-index: 1;
 }
 
-.catalog-list__item:not(.catalog-list__item_infocus):not(:hover) button {
+.catalog-list__item_infocus .catalog-list__popup,
+.catalog-list__item:hover .catalog-list__popup {
+  display: flex;
+}
+
+.catalog-list__item:not(.catalog-list__item_infocus):not(:hover) .catalog-list__popup {
   display: none;
 }
 
+.catalog-list__popup .promo-button {
+  align-self: center;
+  margin-top: auto;
+  margin-bottom: 8%;
+  padding: 0 5%;
+}
+
 .catalog-list__link {
+  display: flex;
+  flex-direction: column;
+
   color: white;
   text-decoration: none;
 }
 
 .catalog-list__link h3 {
+  order: 1;
+  margin: 0;
+  margin-top: 23px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
@@ -304,12 +347,16 @@ body {
 
 .catalog-list__link img {
   width: 100%;
-  height: auto;
+  height: 100%;
 
   border-radius: 50%;
 }
 
 .catalog-list__link p {
+  margin: 0;
+  margin-top: -60px;
+  margin-left: -1px;
+
   font-weight: bold;
   font-size: 45px;
   text-shadow: 2px 2px 3px rgba(49, 50, 53, 0.5);
@@ -749,8 +796,7 @@ body {
 .promo-button_medium {
   box-sizing: border-box;
   height: 46px;
-  padding-right: 22px;
-  padding-left: 22px;
+  padding: 0 22px;
 
   font-size: 18px;
   line-height: 24px;
@@ -842,12 +888,12 @@ body {
 .promo-slide::before {
   content: '';
   position: absolute;
-  top: -300px;
+  top: -300px; /* TODO */
   left: 0;
   z-index: -1;
 
   width: 100%;
-  height: 1000px;
+  height: 1000px; /* TODO */
 }
 
 #promo-slider-1:checked ~ .promo__slides .promo-slide:nth-child(1)::before {
