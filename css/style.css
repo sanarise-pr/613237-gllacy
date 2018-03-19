@@ -537,11 +537,11 @@ body {
 
 .footer__menu {
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
   flex-wrap: wrap;
-  align-content: flex-start;
+  align-content: center;
   align-items: flex-start;
-  width: 400px;
   height: 40px;
 }
 
