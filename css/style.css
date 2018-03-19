@@ -1,5 +1,5 @@
 .about-us {
-  margin-top: 40px;
+  margin: 40px 2.3%;
   padding: 10px 20px;
 
   color: #323232;
@@ -34,9 +34,7 @@
 }
 
 .banners {
-  display: flex;
-  flex-wrap: wrap;
-  margin-top: 41px;
+  margin-top: 40px;
 }
 
 .banner {
@@ -122,12 +120,13 @@
   position: relative;
 
   box-sizing: border-box;
-  width: 50%;
+  max-width: 46.6%;
+  margin-right: 2.2%;
+  margin-left: 2.3%;
   padding: 10px 150px 10px 20px;
   overflow: hidden;
-  /* background-color: #fff; */
 
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .blog-news__header {
@@ -470,7 +469,9 @@ body {
 }
 
 .feedback {
-  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
 
   color: #323232;
 
@@ -576,11 +577,13 @@ body {
 
 .columns-container {
   display: flex;
-  justify-content: center;
+  flex-wrap: wrap;
 }
 
 .location-map {
   position: relative;
+
+  margin-top: 40px;
 }
 
 .location-map__container {
@@ -591,10 +594,11 @@ body {
 .location-map__overlay {
   position: absolute;
   top: 50px;
-  right: 50px;
+  right: 2.3%;
 
+  box-sizing: border-box;
   width: 300px;
-  padding: 20px;
+  padding: 24px;
 
   font-weight: 400;
   font-size: 14px;
@@ -603,6 +607,15 @@ body {
 
   background-color: #fefefe;
   border-radius: 10px;
+}
+
+.location-map__overlay p {
+  margin: 0;
+  margin-bottom: 25px;
+}
+
+.location-map__overlay .promo-button {
+  width: 100%;
 }
 
 .location-map__overlay b {
@@ -767,10 +780,9 @@ body {
 }
 
 .promo-button {
-  display: block;
-
   font: inherit;
   font-weight: 700;
+  text-align: center;
   color: #ffffff;
   text-decoration: none;
   white-space: nowrap;
@@ -779,6 +791,10 @@ body {
   background-image: linear-gradient(to top, #e74a35, #f26843);
   border: none;
   box-shadow: 0 2px 2px 0 rgba(172, 16, 0, 0.64);
+}
+
+a.promo-button {
+  display: inline-block;
 }
 
 .promo-button:hover,
@@ -802,6 +818,10 @@ body {
   line-height: 24px;
 
   border-radius: 30px;
+}
+
+a.promo-button_medium {
+  padding-top: 10px;
 }
 
 .promo-button_large {
@@ -976,7 +996,8 @@ body {
 .subscribe {
   display: flex;
   box-sizing: border-box;
-  width: 50%;
+  max-width: 46.6%;
+  margin-right: 2.3%;
   padding: 5px;
 
   background-image: repeating-linear-gradient(-45deg,
@@ -985,7 +1006,7 @@ body {
   #f8f7f4 11px, #f8f7f4 16px,
   #fe9e90 16px, #fe9e90 22px
   );
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .subscribe__inner-container {
