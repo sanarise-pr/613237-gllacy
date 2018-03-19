@@ -527,8 +527,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin: 20px 0;
-  padding: 0 calc(2.3% - 1px);
+  margin: 0 calc(2.3% - 1px);
+  padding: 20px 0;
+}
+
+.footer__bordered {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .footer__menu {
@@ -753,6 +757,10 @@ body {
 }
 
 .pagination {
+  display: flex;
+  justify-content: flex-end;
+  margin: 100px 2.3% 30px 2.3%;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 18px;
@@ -760,7 +768,7 @@ body {
 }
 
 .pagination__list {
-  display: inline;
+  margin: 0;
   padding: 0;
 
   list-style: none;
