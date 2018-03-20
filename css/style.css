@@ -42,7 +42,7 @@
 
   box-sizing: border-box;
   max-width: 46.6%;
-  min-height: 229px;
+  min-height: 230px;
   padding: 16px 20px 69px 18px;
 
   background-position: 50% 50%;
@@ -161,9 +161,6 @@ body {
   font-size: 16px;
   font-family: 'Roboto', Arial, sans-serif;
   color: white;
-
-  transition-duration: 0.2s;
-  transition-property: background-color;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -584,7 +581,7 @@ body {
 
 .header__working-hours {
   margin: 0;
-  margin-top: -5px;
+  margin-top: -4px;
 
   font-weight: 700;
   font-size: 14px;
@@ -593,7 +590,7 @@ body {
 
 .header__contact-tel {
   margin: 0;
-  margin-top: 5px;
+  margin-top: 4px;
 
   font-weight: 700;
   font-size: 22px;
@@ -697,9 +694,9 @@ body {
 }
 
 .main-menu {
-  margin-top: 14px;
+  margin-top: 13px;
   margin-right: auto;
-  margin-left: 24px;
+  margin-left: 10px;
 
   font-weight: 700;
   line-height: 18px;
@@ -713,23 +710,29 @@ body {
 }
 
 .main-menu__item {
-  margin-right: 28px;
+  margin-right: 0;
 }
 
 .main-menu__link {
+  margin: 6px 14px;
+
   color: #ffffff;
   text-decoration: none;
 
-  border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+  background-repeat: repeat-x;
+  background-position: 0 1.1em;
+  background-size: 5px 1px;
 }
 
 .main-menu__link:hover,
 .main-menu__link:focus,
 .main-menu__link:active,
 .main-menu__link_current {
+  margin: 0;
   padding: 6px 14px;
 
-  border-bottom: none;
+  background-image: none;
   border-radius: 15px;
   outline: none;
 }
@@ -890,6 +893,11 @@ a.promo-button_medium {
   position: relative;
 }
 
+.promo__slider-input {
+  position: absolute;
+  bottom: 20px;
+}
+
 .promo__slider-controls {
   position: absolute;
   bottom: 20px;
@@ -958,7 +966,7 @@ a.promo-button_medium {
 .promo-slide::before {
   content: '';
   position: absolute;
-  top: -300px; /* TODO */
+  top: -250px;
   left: 0;
   z-index: -1;
 
@@ -967,15 +975,19 @@ a.promo-button_medium {
 }
 
 #promo-slider-1:checked ~ .promo__slides .promo-slide:nth-child(1)::before {
-  background-image: radial-gradient(circle 500px, #cff6e1, transparent);
+  /* 
+  Safari при использовании transparent в кач-ве 2го цвета показывает неправильную картинку.
+  Поэтому используем цвет фона в кач-ве 2го цвета.
+  */
+  background-image: radial-gradient(circle 500px, #cff6e1 5%, rgba(132, 157, 143, 0.8));
 }
 
 #promo-slider-2:checked ~ .promo__slides .promo-slide:nth-child(2)::before {
-  background-image: radial-gradient(circle 500px, #d6ebfc, transparent);
+  background-image: radial-gradient(circle 500px, #d6ebfc 5%, rgba(137, 150, 166, 0.8));
 }
 
 #promo-slider-3:checked ~ .promo__slides .promo-slide:nth-child(3)::before {
-  background-image: radial-gradient(circle 500px, #fae4db, transparent);
+  background-image: radial-gradient(circle 500px, #fae4db 5%, rgba(157, 139, 132, 0.8));
 }
 
 .promo-slide__image {
