@@ -1,5 +1,5 @@
 .about-us {
-  margin: 38px 2.3%;
+  margin: 38px 2.3% 0;
   padding: 25px 20px;
 
   color: #323232;
@@ -215,24 +215,37 @@
   line-height: 18px;
 }
 
+.columns-container {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
 .blog-news {
   position: relative;
 
   box-sizing: border-box;
-  max-width: 46.6%;
+  width: 46.6%;
+  min-height: 220px;
   margin-right: 2.2%;
   margin-left: 2.3%;
-  padding: 10px 150px 10px 20px;
+  padding: 10px 20px;
   overflow: hidden;
 
   border-radius: 15px;
 }
 
 .blog-news__header {
+  margin: 13px 0 5px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 22px;
   color: #5a5a5a;
+}
+
+.blog-news__size-container {
+  max-width: 300px;
 }
 
 .blog-news__post-title {
@@ -708,11 +721,6 @@ body {
   border: 0;
 
   clip: rect(0 0 0 0);
-}
-
-.columns-container {
-  display: flex;
-  flex-wrap: wrap;
 }
 
 .dark-link,
@@ -1241,8 +1249,7 @@ a.promo-button_medium {
 .subscribe {
   display: flex;
   box-sizing: border-box;
-  max-width: 46.6%;
-  margin-right: 2.3%;
+  width: 46.6%;
   padding: 5px;
 
   background-image: repeating-linear-gradient(-45deg,
@@ -1255,7 +1262,10 @@ a.promo-button_medium {
 }
 
 .subscribe__inner-container {
-  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* костыль для IE */
+  padding: 30px 20px;
 
   font-weight: 400;
   font-size: 16px;
@@ -1264,6 +1274,27 @@ a.promo-button_medium {
 
   background-color: #f8f7f4;
   border-radius: 10px;
+}
+
+.subscribe__promo {
+  margin: 0;
+}
+
+.subscribe form {
+  display: flex;
+  align-items: center;
+  margin-top: auto;
+  margin-bottom: 4px;
+}
+
+.subscribe .text-input {
+  flex-grow: 1;
+
+  font-size: 16px;
+}
+
+.subscribe button {
+  margin-left: 10px;
 }
 
 .text-input {
