@@ -445,6 +445,18 @@ body {
   text-decoration: none;
 }
 
+.catalog-list__item_bestseller .catalog-list__link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 61px;
+  height: 61px;
+
+  background-image: url('../img/bestseller-label.svg');
+}
+
 .catalog-list__link h3 {
   order: 1;
   margin: 0;
