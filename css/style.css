@@ -95,7 +95,7 @@
   color: #323232;
 
   background-color: #f8f7f4;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .basket-form__goods-table {
@@ -391,8 +391,7 @@ body {
 }
 
 .catalog-menu {
-  padding: 10px 0;
-  overflow: hidden;
+  padding: 5px 0;
 
   font-weight: 400;
   font-size: 14px;
@@ -401,18 +400,35 @@ body {
   white-space: nowrap;
 
   background-color: #f8f7f4;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .catalog-menu__list {
+  margin: 0;
   padding: 0;
 
   list-style: none;
 }
 
+.catalog-menu__item {
+  margin-bottom: 3px;
+}
+
+.catalog-menu__list::before {
+  content: '';
+
+  display: block;
+  height: 1px;
+  margin: 6px 6px 3px 6px;
+
+  background-color: #d1d0ce;
+}
+
 .catalog-menu__link {
   display: block;
-  padding: 10px;
+  box-sizing: border-box;
+  height: 28px;
+  padding: 6px 20px;
 
   color: #323232;
   text-decoration: none;
@@ -435,6 +451,7 @@ body {
   color: #ffffff;
 
   background-color: #d07058;
+  cursor: default;
 }
 
 .catalog-menu__link b {
@@ -669,7 +686,7 @@ body {
   overflow: hidden;
 
   background-color: #f8f7f4;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .login-form input {
@@ -845,6 +862,8 @@ body {
 .popup {
   position: absolute;
   z-index: 1;
+
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
 
 .popup-container:not(.popup-container_infocus):not(:hover) .popup {
@@ -1051,7 +1070,7 @@ a.promo-button_medium {
   overflow: hidden;
 
   background-color: #f8f7f4;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 
 .search-form input {
