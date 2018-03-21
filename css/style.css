@@ -1,14 +1,16 @@
 .about-us {
-  margin: 40px 2.3%;
-  padding: 10px 20px;
+  margin: 38px 2.3%;
+  padding: 25px 20px;
 
   color: #323232;
 
   background-image: url('../img/waffle-bg.jpg');
-  border-radius: 20px;
+  border-radius: 15px;
 }
 
 .about-us__header {
+  margin: 0;
+
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
@@ -17,7 +19,7 @@
 .about-us__advantages {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -27,10 +29,43 @@
 }
 
 .about-us__advantage {
+  position: relative;
+
   box-sizing: border-box;
   width: 50%;
-  padding-top: 20px;
-  padding-left: 50px;
+  padding-top: 21px;
+  padding-left: 55px;
+}
+
+.about-us__advantage:nth-of-type(2n) {
+  width: calc(50% - 11px);
+  margin-left: 11px;
+}
+
+.about-us__advantage::before {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 0;
+
+  width: 49px;
+  height: 49px;
+}
+
+.about-us__advantage_tech::before {
+  background-image: url('../img/advantage-tech.svg');
+}
+
+.about-us__advantage_cows::before {
+  background-image: url('../img/advantage-cows.svg');
+}
+
+.about-us__advantage_eco::before {
+  background-image: url('../img/advantage-eco.svg');
+}
+
+.about-us__advantage_temp::before {
+  background-image: url('../img/advantage-temp.svg');
 }
 
 .banners {
