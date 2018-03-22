@@ -316,7 +316,7 @@ body {
 }
 
 .catalog-filter {
-  margin: 40px 2.3% 0 2.3%;
+  margin: 25px 2.3% 0 2.3%;
 
   font-weight: 500;
   font-size: 16px;
@@ -336,11 +336,13 @@ body {
 .catalog-filter fieldset {
   position: relative;
 
-  margin-bottom: 30px;
+  box-sizing: border-box;
+  height: 36px;
+  margin-top: 38px;
 
   background-color: rgba(248, 247, 244, 0.2);
   border: none;
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .catalog-filter__flex-wrapper {
@@ -349,7 +351,7 @@ body {
 
 .catalog-filter__legend {
   position: absolute;
-  top: -20px;
+  top: -23px;
 
   width: 300px;
 
@@ -400,6 +402,7 @@ body {
   flex-wrap: wrap;
   align-items: flex-start;
   margin: 0;
+  margin-top: 3px;
   padding: 0;
 
   list-style: none;
@@ -409,7 +412,7 @@ body {
   position: relative;
 
   width: 22.2%;
-  margin-top: 40px;
+  margin-top: 37px;
   margin-left: 2.2%;
 }
 
