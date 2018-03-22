@@ -236,7 +236,7 @@
       <div class="location-map__overlay">
         <p class="location-map__address">Адрес главного офиса<br>и офлайн-магазина:<br><b>ул. Большая Конюшенная 19/8, Санкт-Петербург</b></p>
         <p class="location-map__tel">Для заказов по телефону:<br><b>8 812 450-25-25</b><br>(с 10 до 20 ежедневно)</p>
-        <a class="promo-button promo-button_medium" href="#">Форма обратной связи</a>
+        <a class="promo-button promo-button_medium" id="feedback-button">Форма обратной связи</a>
       </div>
     </section>
   </main>
@@ -267,22 +267,25 @@
     </div>
   </footer>
 
-  <section class="feedback modal">
+  <section class="feedback feedback_shown">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <p class="feedback__tagline">Мы обязательно вам ответим!</p>
-    <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма обратной связи">
-      <input class="text-input" type="text" name="name" placeholder="Как вас зовут?" aria-label="Имя">
-      <input class="text-input" type="email" name="email" placeholder="Ваша почта для ответа?" aria-label="Электронная почта" required>
-      <textarea class="text-input" name="message" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-label="Текст сообщения" required></textarea>
-      <button class="promo-button promo-button_medium" type="submit">Отправить</button>
-    </form>
-    <button class="feedback__close-btn" type="button">Закрыть</button>
+    <div class="feedback__window">
+      <p class="feedback__tagline">Мы обязательно вам ответим!</p>
+      <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма обратной связи">
+        <input class="text-input" type="text" name="name" placeholder="Как вас зовут?" aria-label="Имя">
+        <input class="text-input" type="email" name="email" placeholder="Ваша почта для ответа?" aria-label="Электронная почта" required>
+        <textarea class="text-input" name="message" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-label="Текст сообщения" required></textarea>
+        <button class="promo-button promo-button_medium" type="submit">Отправить</button>
+      </form>
+      <button class="feedback__close-btn" type="button"><span class="visually-hidden">Закрыть</span></button>
+    </div>
   </section>
 
   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
   <script src="js/location-map.js"></script>
   <script src="js/popup-container.js"></script>
   <script src="js/promo-bg-changer.js"></script>
+  <script src="js/feedback-modal.js"></script>
 </body>
 
 </html>
