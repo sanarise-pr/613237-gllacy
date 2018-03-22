@@ -326,19 +326,24 @@ body {
 .catalog-filter form {
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
   align-items: flex-start;
+  width: 860px;
 }
 
 .catalog-filter p {
   margin: 0;
 }
 
-.catalog-filter fieldset {
-  position: relative;
-
+.catalog-filter fieldset,
+.catalog-filter button {
   box-sizing: border-box;
   height: 36px;
   margin-top: 38px;
+}
+
+.catalog-filter fieldset {
+  position: relative;
 
   background-color: rgba(248, 247, 244, 0.2);
   border: none;
@@ -366,12 +371,14 @@ body {
 }
 
 .catalog-filter button {
+  padding: 0 27px;
+
   font: inherit;
   color: #ffffff;
 
   background-color: rgba(255, 255, 255, 0.2);
   border: 2px solid #ffffff;
-  border-radius: 10px;
+  border-radius: 20px;
 }
 
 .catalog-filter button:hover,
@@ -1031,7 +1038,9 @@ body {
 }
 
 .pagination__link {
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 26px;
   height: 26px;
 
@@ -1046,9 +1055,6 @@ body {
 
 .pagination__link::before {
   content: counter(pages);
-
-  display: inline-block;
-  padding-top: 5px;
 }
 
 .pagination__link:hover,
