@@ -289,19 +289,27 @@ body {
   background-color: #9d8b84;
 }
 
-
+.breadcrumbs {
+  margin-top: 4px;
+}
 
 .breadcrumbs__list {
+  display: flex;
   padding: 0;
 
   list-style: none;
 }
 
-.breadcrumbs__item {
-  display: inline-block;
+.breadcrumbs__item:not(:last-of-type)::after {
+  content: '»';
+
+  margin: 0 6px;
 }
 
 .breadcrumbs__link {
+  display: inline-block;
+  height: 20px;
+
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
@@ -880,7 +888,7 @@ body {
 }
 
 .main-container__header {
-  margin: 0 2.3%;
+  margin: -15px 2.3%;
 
   font-weight: 700;
   font-size: 35px;
