@@ -459,6 +459,9 @@ body {
   padding-left: 32px;
 
   opacity: 0.8;
+
+  -ms-user-select: none;
+      user-select: none;
 }
 
 .catalog-filter__checkable:hover + label,
