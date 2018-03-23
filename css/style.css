@@ -666,7 +666,8 @@ body {
 
 .feedback textarea {
   align-self: stretch;
-  height: 153px;
+  min-width: 427px;
+  min-height: 153px;
   margin-bottom: 26px;
 }
 
