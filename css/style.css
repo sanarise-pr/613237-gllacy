@@ -582,14 +582,14 @@ body {
 
 .catalog-item__popup {
   position: absolute;
+  top: -6px;
+  right: -5%;
   bottom: calc(-8% - 55px);
   left: -5%;
   z-index: -1;
 
   display: flex;
   flex-direction: column;
-  width: 110%;
-  height: calc(108% + 55px + 6px);
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 10px;
