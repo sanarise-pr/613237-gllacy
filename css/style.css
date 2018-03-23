@@ -291,11 +291,12 @@ body {
 }
 
 .breadcrumbs {
-  margin-top: 4px;
+  margin-top: 20px;
 }
 
 .breadcrumbs__list {
   display: flex;
+  margin: 0;
   padding: 0;
 
   list-style: none;
@@ -317,7 +318,7 @@ body {
 }
 
 .catalog-filter {
-  margin: 25px 2.3% 0 2.3%;
+  margin: 10px 2.3% 0 2.3%;
 
   font-weight: 500;
   font-size: 16px;
@@ -921,10 +922,18 @@ body {
 .header__main-row,
 .header__sub-row {
   display: flex;
+}
+
+.header__main-row {
   align-items: center;
 }
 
+.header__sub-row {
+  height: 40px;
+}
+
 .header__contact-info {
+  margin-top: -4px;
   margin-left: auto;
 
   text-align: right;
@@ -932,7 +941,6 @@ body {
 
 .header__working-hours {
   margin: 0;
-  margin-top: -4px;
 
   font-weight: 700;
   font-size: 14px;
@@ -1095,7 +1103,7 @@ body {
 }
 
 .main-container__header {
-  margin: -15px 2.3%;
+  margin: 2px 2.3% 0;
 
   font-weight: 700;
   font-size: 35px;
