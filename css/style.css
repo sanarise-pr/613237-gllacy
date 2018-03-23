@@ -370,7 +370,6 @@ body {
   color: #ffffff;
 
   background: url('../img/icon-down-dir.svg') 100% / 7% no-repeat;
-  /* background-position:  */
   background-color: transparent;
   border: none;
 
@@ -1520,6 +1519,15 @@ a.promo-button_medium {
   border-radius: 50%;
   box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.7);
   opacity: 0.8;
+}
+
+.social__link:hover,
+.social__link:focus {
+  opacity: 1;
+}
+
+.social__link:active {
+  filter: brightness(0.9);
 }
 
 .social__link_twitter {
