@@ -151,8 +151,12 @@
           <fieldset class="catalog-filter__price-set">
             <div class="catalog-filter__legend"><legend>Цена:</legend><output>100руб. - 500руб.</output></div>
             <div class="catalog-filter__flex-wrapper">
-              <input class="visually-hidden" type="range" name="min-price" min="0" max="800" step="100" value="100" aria-label="Минимальная цена">
-              <input class="visually-hidden" type="range" name="max-price" min="0" max="800" step="100" value="500" aria-label="Максимальная цена">
+              <div class="catalog-filter__price-range">
+                <input class="visually-hidden" id="catalog-filter-min-price" type="range" name="min-price" min="0" max="800" step="100" value="100" aria-label="Минимальная цена">
+                <label for="catalog-filter-min-price"></label>
+                <input class="visually-hidden" id="catalog-filter-max-price" type="range" name="max-price" min="0" max="800" step="100" value="500" aria-label="Максимальная цена">
+                <label for="catalog-filter-max-price"></label>
+              </div>
             </div>
           </fieldset>
           <fieldset class="catalog-filter__fatness-set">
