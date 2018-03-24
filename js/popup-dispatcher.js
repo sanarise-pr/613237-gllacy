@@ -2,13 +2,14 @@ function PopupDispather (elements) {
   var anchor = elements.anchor;
   var popup = elements.popup;
 
-  var shown = false;
+  var hover = false;
+  var focus = false;
 
   addListeners(anchor);
   addListeners(popup);
 
   function applyState () {
-    if (shown) {
+    if (hover || focus) {
       anchor.classList.add('hover');
       popup.classList.remove('visually-hidden');
     } else {
@@ -19,23 +20,23 @@ function PopupDispather (elements) {
 
   function addListeners (element) {
     element.addEventListener('mouseenter', function (e) {
-      shown = true;
+      hover = true;
       applyState();
     });
     
     element.addEventListener('mouseleave', function (e) {
-      shown = false;
+      hover = false;
       applyState();
     });
     
     element.addEventListener('focusin', function (e) {
-      shown = true;
+      focus = true;
       applyState();
     });
     
     element.addEventListener('focusout', function (e) {
       if (!e.relatedTarget || e.relatedTarget && !isNestedChild(e.relatedTarget, element)) {
-        shown = false;
+        focus = false;
         applyState();
       }
     });
