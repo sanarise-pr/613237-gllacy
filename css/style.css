@@ -591,7 +591,7 @@ body {
   left: -5%;
   z-index: -1;
 
-  display: flex;
+  display: none;
   flex-direction: column;
 
   background-color: rgba(255, 255, 255, 0.2);
@@ -607,10 +607,6 @@ body {
 .catalog-item_infocus .catalog-item__popup,
 .catalog-item:hover .catalog-item__popup {
   display: flex;
-}
-
-.catalog-item:not(.catalog-item_infocus):not(:hover) .catalog-item__popup {
-  display: none;
 }
 
 .catalog-item__popup .promo-button {
