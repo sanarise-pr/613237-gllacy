@@ -538,7 +538,7 @@ body {
   outline: none;
 }
 
-.catalog-filter__legend {
+.catalog-filter legend {
   position: absolute;
   top: -23px;
 
@@ -547,11 +547,6 @@ body {
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
-}
-
-.catalog-filter legend,
-.catalog-filter output {
-  float: left;
 }
 
 @font-face {
