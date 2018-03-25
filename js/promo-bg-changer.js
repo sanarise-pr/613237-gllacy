@@ -1,4 +1,4 @@
-function initBackgroundChanger (inputElements) {
+function initBackgroundChanger(inputElements) {
   for (var index = 0; index < inputElements.length; index++) {
     inputElements[index].addEventListener('change', function() {
       setupBodyBackground(inputElements);
