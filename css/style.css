@@ -1619,6 +1619,11 @@ a.promo-button_medium {
   color: #999999;
 }
 
+.text-input:-ms-input-placeholder {
+  font-weight: 400;
+  color: #999999;
+}
+
 .user-menu {
   display: flex;
   flex-wrap: wrap;
