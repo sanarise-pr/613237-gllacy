@@ -439,6 +439,7 @@ body {
   background-color: #ababab;
   border: 8px solid #ffffff;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .catalog-filter__price-range input:hover + label,
