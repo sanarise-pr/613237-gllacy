@@ -33,5 +33,4 @@ function initFeedback() {
   }
 }
 
-
 initFeedback();
