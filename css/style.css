@@ -1013,25 +1013,28 @@ body {
 }
 
 .location-map {
-  position: relative;
-
+  height: 430px;
   margin-top: 40px;
 }
 
 .location-map__container {
-  width: 100%;
+  position: absolute;
+  right: 0;
+  left: 0;
+
+  min-width: 900px;
   height: 430px;
 
   background: #e4e1d4 url('../img/map-bg.jpg') 50% 50% no-repeat;
 }
 
 .location-map__overlay {
-  position: absolute;
+  position: relative;
   top: 60px;
-  right: 2.3%;
 
   box-sizing: border-box;
   width: 300px;
+  margin: 0 2.3% 0 auto;
   padding: 30px 24px;
 
   font-weight: 400;
