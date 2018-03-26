@@ -320,6 +320,7 @@ body {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
+  vertical-align: baseline;
 }
 
 .catalog-filter {
@@ -1217,7 +1218,7 @@ body {
 .pagination__next::before {
   content: url('../img/icon-right-small.svg');
 
-  display: inline-block;
+  display: block;
   padding-top: 6px;
 }
 
@@ -1304,7 +1305,8 @@ body {
 }
 
 a.promo-button {
-  display: inline-block;
+  display: block;
+  padding-top: 10px;
 }
 
 .promo-button:hover,
@@ -1328,10 +1330,6 @@ a.promo-button {
   line-height: 24px;
 
   border-radius: 30px;
-}
-
-a.promo-button_medium {
-  padding-top: 10px;
 }
 
 .promo-button_large {
