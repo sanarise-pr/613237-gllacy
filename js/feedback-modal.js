@@ -4,12 +4,14 @@ function initFeedback() {
   document.getElementById('feedback-button')
     .addEventListener('click', showFeedback);
 
-  [
-    document.querySelector('.feedback__close-btn'), 
-    document.querySelector('.feedback__background')
-  ]
-    .forEach(function (element) {
-      element.addEventListener('click', hideFeedback);
+  document.querySelector('.feedback__close-btn')
+    .addEventListener('click', hideFeedback);
+
+  document.querySelector('.feedback__background')
+    .addEventListener('click', function (e) {
+      if (e.target === this) {
+        hideFeedback(e);
+      }
     });
 
   function showFeedback(e) {
