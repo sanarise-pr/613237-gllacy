@@ -269,16 +269,17 @@
 
   <section class="feedback">
     <h2 class="visually-hidden">Форма обратной связи</h2>
-    <div class="feedback__mask-overlay"></div>
-    <div class="feedback__window">
-      <p class="feedback__tagline">Мы обязательно вам ответим!</p>
-      <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма обратной связи">
-        <input class="text-input" type="text" name="name" placeholder="Как вас зовут?" aria-label="Имя">
-        <input class="text-input" type="email" name="email" placeholder="Ваша почта для ответа?" aria-label="Электронная почта" required>
-        <textarea class="text-input" name="message" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-label="Текст сообщения" required></textarea>
-        <button class="promo-button promo-button_medium" type="submit">Отправить</button>
-      </form>
-      <button class="feedback__close-btn" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <div class="feedback__background">
+      <div class="feedback__window">
+        <p class="feedback__tagline">Мы обязательно вам ответим!</p>
+        <form action="https://echo.htmlacademy.ru" method="post" aria-label="Форма обратной связи">
+          <input class="text-input" type="text" name="name" placeholder="Как вас зовут?" aria-label="Имя">
+          <input class="text-input" type="email" name="email" placeholder="Ваша почта для ответа?" aria-label="Электронная почта" required>
+          <textarea class="text-input" name="message" cols="30" rows="10" placeholder="Напишите что-нибудь..." aria-label="Текст сообщения" required></textarea>
+          <button class="promo-button promo-button_medium" type="submit">Отправить</button>
+        </form>
+        <button class="feedback__close-btn" type="button"><span class="visually-hidden">Закрыть</span></button>
+      </div>
     </div>
   </section>
 

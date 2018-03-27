@@ -6,7 +6,7 @@ function initFeedback() {
 
   [
     document.querySelector('.feedback__close-btn'), 
-    document.querySelector('.feedback__mask-overlay')
+    document.querySelector('.feedback__background')
   ]
     .forEach(function (element) {
       element.addEventListener('click', hideFeedback);
@@ -14,18 +14,15 @@ function initFeedback() {
 
   function showFeedback(e) {
     e.preventDefault();
-    if (!feedbackWindow.classList.contains('feedback_shown')) {
-      document.addEventListener('keydown', onKeyPress);
-      feedbackWindow.classList.add('feedback_shown');
-    }
+    feedbackWindow.classList.remove('feedback_show-must-go-out');
+    feedbackWindow.classList.add('feedback_show-must-go-on');
+    document.addEventListener('keydown', onKeyPress);
   }
 
   function hideFeedback(e) {
     e.preventDefault();
-    if (feedbackWindow.classList.contains('feedback_shown')) {
-      document.removeEventListener('keydown', onKeyPress);
-      feedbackWindow.classList.remove('feedback_shown');
-    }
+    feedbackWindow.classList.add('feedback_show-must-go-out');
+    document.removeEventListener('keydown', onKeyPress);
   }
 
   function onKeyPress (e) {
