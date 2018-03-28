@@ -1499,19 +1499,15 @@ a.promo-button {
 }
 
 #promo-slider-1:checked ~ .promo__slides .promo-slide:nth-child(1)::before {
-  /* 
-  Safari при использовании transparent в кач-ве 2го цвета показывает неправильную картинку.
-  Поэтому используем цвет фона в кач-ве 2го цвета.
-  */
-  background-image: radial-gradient(circle 500px, #cff6e1 5%, rgba(132, 157, 143, 0.8));
+  background-image: radial-gradient(circle 500px, #cff6e1 5%, rgba(190, 204, 196, 0));
 }
 
 #promo-slider-2:checked ~ .promo__slides .promo-slide:nth-child(2)::before {
-  background-image: radial-gradient(circle 500px, #d6ebfc 5%, rgba(137, 150, 166, 0.8));
+  background-image: radial-gradient(circle 500px, #d6ebfc 5%, rgba(194, 201, 209, 0));
 }
 
 #promo-slider-3:checked ~ .promo__slides .promo-slide:nth-child(3)::before {
-  background-image: radial-gradient(circle 500px, #fae4db 5%, rgba(157, 139, 132, 0.8));
+  background-image: radial-gradient(circle 500px, #fae4db 5%, rgba(204, 194, 190, 0));
 }
 
 .promo-slide__image {
